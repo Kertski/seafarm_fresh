@@ -17,7 +17,7 @@ $(document).ready(function () {
             success: function (response) {
                 $('.cart-count').html('');
                 $('.cart-count').html(response.count);
-                console.log(response.count)
+                console.log(response.count);
             }
         });
     }
@@ -45,7 +45,8 @@ $(document).ready(function () {
         });
     });
 
-    $('.increment-btn').click(function (e) {
+    // $('.increment-btn').click(function (e) {
+    $(document).on('click', '.increment-btn', function (e) {
         e.preventDefault();
 
         var inc_value = $(this).closest('.product_data').find('.qty_input').val();
@@ -57,7 +58,9 @@ $(document).ready(function () {
             $(this).closest('.product_data').find('.qty_input').val(value);
         }
     });
-    $('.decrement-btn').click(function (e) {
+
+    //$('.decrement-btn').click(function (e) {
+    $(document).on('click', '.decrement-btn', function (e) {
         e.preventDefault();
 
         var dec_value = $(this).closest('.product_data').find('.qty_input').val();
@@ -70,7 +73,8 @@ $(document).ready(function () {
         }
     });
 
-    $('.remove-cart-item').click(function (e) {
+    // $('.remove-cart-item').click(function (e) {
+        $(document).on('click', '.remove-cart-item', function (e) {
         e.preventDefault();
 
         var prod_id = $(this).closest('.product_data').find('.prod_id').val();
@@ -81,12 +85,15 @@ $(document).ready(function () {
                 'prod_id': prod_id,
             },
             success: function (response) {
-                window.location.reload();
+
+                loadcart();
+                $('.cartitems').load(location.href + " .cartitems")
             }
         });
     });
 
-    $('.changeQuantity').click(function (e) {
+    // $('.changeQuantity').click(function (e) {
+    $(document).on('click', '.changeQuantity', function (e) {
         e.preventDefault();
 
         var prod_id = $(this).closest('.product_data').find('.prod_id').val();
@@ -101,7 +108,7 @@ $(document).ready(function () {
             url:"update-cart",
             data: data,
             success: function (response) {
-                window.location.reload();
+                $('.cartitems').load(location.href + " .cartitems")
             }
         });
     });

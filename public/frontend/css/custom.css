@@ -59,3 +59,21 @@
 .checked {
     color: #FFd900;
 }
+
+.search-bar {
+    width: 30%;
+}
+
+.ui-menu{
+
+    z-index: 3500 !important;
+}
+
+.messenger
+{
+    bottom: 10px;
+    left: 10px;
+    position: fixed;
+    z-index: 5;
+ 
+}

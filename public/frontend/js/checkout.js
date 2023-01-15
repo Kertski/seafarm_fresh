@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('payment_btn').click(function (e) {
+    $('.paypal-button').click(function (e) {
         e.preventDefault();
 
         var firstname = $('.first_name').val();

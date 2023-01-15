@@ -87,7 +87,7 @@
                         </table>
                         <h6>{{ $total }}</h6>
                         <hr>
-                        <button class="btn btn-primary float-end payment_btn" type="submit" name="payment_mode" value="Cash on Delivery">Place Order (COD)</button>
+                        <button class="btn btn-primary float-end paypal-button" type="submit" name="payment_mode" value="Cash on Delivery">Place Order (COD)</button>
                         <div id="paypal-button-container"></div>
                         
                     </div>
@@ -151,7 +151,9 @@
             },
             success: function (response) {
                 swal(response.status)
-                window.location.href = "/my-orders"
+                .then((value) => {
+                    window.location.href = "/my-orders"
+                });    
             }
             });
 

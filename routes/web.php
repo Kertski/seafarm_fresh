@@ -20,6 +20,8 @@ Route::get('/', [FrontendController::class, 'index']);
 Route::get('category', [FrontendController::class, 'category']);
 Route::get('view-category/{slug}', [FrontendController::class, 'viewcategory']);
 Route::get('category/{cat_slug}/{prod_slug}',[FrontendController::class, 'productview']);
+Route::get('product-list', [FrontendController::class, 'productListAjax']);
+Route::post('searchproduct', [FrontendController::class, 'searchProduct']);
 
 Auth::routes();
 
@@ -29,6 +31,7 @@ Route::get('load-cart-data', [CartController::class, 'cartcount']);
 Route::post('add-to-cart', [CartController::class,'addProduct']);
 Route::post('remove-cart-item', [CartController::class,'removeProduct']);
 Route::post('update-cart', [CartController::class, 'updateCart']);
+
 
 // User 
 
