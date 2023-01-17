@@ -1,11 +1,14 @@
-@extends('layouts.app')
+@extends('layouts.front')
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center register-container-row">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+            <div class="text-center">
+                <img src="{{ asset('assets/images/seafarm-logo-blue.png') }}" alt="Seafarm Fresh" width="300px">
+            </div>
+            <div class="card register-card">
+                <div class="card-header register-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -63,7 +66,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary register-button">
                                     {{ __('Register') }}
                                 </button>
                             </div>

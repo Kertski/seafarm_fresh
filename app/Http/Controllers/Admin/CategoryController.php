@@ -37,13 +37,13 @@ class CategoryController extends Controller
         $category->slug = $request->input('slug');
         $category->description = $request->input('description');
         $category->status = $request->input('status') == TRUE?'1': '0';
-        $category->favorites = $request->input('favorites')  == TRUE?'1': '0';
         $category->meta_title = $request->input('meta_title');
         $category->meta_keywords = $request->input('meta_keywords');
         $category->meta_descript = $request->input('meta_descript');
         $category->save();
 
         return redirect('/dashboard')->with('status',"Category Added Successfully");
+
         
     }
 
@@ -69,16 +69,17 @@ class CategoryController extends Controller
             $file->move(public_path('assets/uploads/category'), $filename);
             $category->image = $filename;
         }
+
         $category->name = $request->input('name');
         $category->slug = $request->input('slug');
         $category->description = $request->input('description');
         $category->status = $request->input('status') == TRUE?'1': '0';
-        $category->favorites = $request->input('favorites')  == TRUE?'1': '0';
         $category->meta_title = $request->input('meta_title');
         $category->meta_keywords = $request->input('meta_keywords');
         $category->meta_descript = $request->input('meta_descript');
         $category->update();
         return redirect('/dashboard')->with('status', "Category Updated Successfully");
+    
     }
 
     public function destroy($id)
@@ -93,8 +94,10 @@ class CategoryController extends Controller
                 File::delete($path);
             }
         }
+
         $category->delete();
         return redirect('categories')->with('status', "Category Deleted Successfully");
+    
     }
 
 }

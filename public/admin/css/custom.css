@@ -1,3 +1,51 @@
 .cate_image {
     width: 100px;
 }
+
+.blog_image {
+    width: 100px;
+}
+
+.column_name_admin {
+    background-color: #6DBB00;
+    color: white;
+}
+
+.card_name_admin {
+    background-color: #1793A6 !important;
+    color: white;
+    font-size: 100px;
+}
+
+.edit_category_header {
+    background-color: #1793A6 !important;
+    color: white;
+}
+
+.add_category_header {
+    background-color: #1793A6 !important;
+    color: white;
+}
+
+.id_text {
+    font-weight: bolder;
+}
+
+.edit_product_header {
+    background-color: #1793A6 !important;
+    color: white;
+}
+
+.add_product_header {
+    background-color: #1793A6 !important;
+    color: white;
+}
+
+.edit_blog_header {
+    background-color: #1793A6 !important;
+    color: white;
+}
+
+.category_name {
+    font-weight: bold !important;
+}

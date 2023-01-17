@@ -2,9 +2,9 @@
 
 @section('content')
     <div class='card'>
-        <div  class='card-header'>
+        <div  class='card-header edit_product_header'>
             <h4>
-                Add Product
+                Update  Product
             </h4>
         </div>
         <div  class='card-body'>
@@ -47,16 +47,12 @@
                         <input type= "number" class="form-control" name="tax" value="{{ $products->tax }}"/>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="">Quantity</label>
-                        <input type= "number" class="form-control" name="qty" value="{{ $products->qty }}"/>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="">Status</label>
+                        <label for="">Active</label>
                         <input type= "checkbox" name="status" {{ $products->status == "1" ? 'checked' : ''}}/>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="">Favorite</label>
-                        <input type="checkbox" name="favorite" {{ $products->status == "1" ? 'checked' : ''}}/>
+                        <input type="checkbox" name="favorite" {{ $products->favorite== "1" ? 'checked' : ''}}/>
                     </div>
                     <div class="col-md-12 mb-3">
                         <label for="">Meta Title</label>
@@ -70,13 +66,15 @@
                         <label for="">Meta Description</label>
                         <textarea type="text" name="meta_descript" class="form-control">{{ $products->meta_descript}}</textarea>
                     </div>
-                    @if($products->image)
-                        <img src="{{ asset('assets/uploads/products/'.$products->image) }}" alt=""/>
-                    @endif                    
+                    <div class="col-md-12">
+                        @if($products->image)
+                            <img src="{{ asset('assets/uploads/products/'.$products->image) }}" alt="Product Image" width="300px"/>
+                        @endif  
+                    </div>                  
                     <div class="col-md-12">
                         <input type="file" name="image" class="form-control">
                     </div class="col-md-12">
-                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="submit" class="btn btn-primary m-3">Update</button>
                     </div>
                 </div>
             </form>

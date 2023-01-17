@@ -20,11 +20,10 @@
     <div class="wrapper">
         @include('layouts.inc.sidebar')
         <div class="main-panel">
-            @include('layouts.inc.adminnav')
-                <div class="content">
-                    @yield('content')
-                </div>
-            @include('layouts.inc.adminfooter')
+        @include('layouts.inc.adminnav')
+            <div class="content">
+                @yield('content')
+            </div>
         </div>
     </div>
 

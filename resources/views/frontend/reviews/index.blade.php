@@ -6,15 +6,15 @@
 <div class="container">
     <div class="row">
         <div class="com-md-12">
-            <div class="card">
+            <div class="card review-card">
                 <div class="card-body">
                     @if($verified_purchase->count() > 0)
-                        <h5>Write a Review for {{ $product->name }}</h5>
+                        <h5>Write a Review for Seafarm Fresh {{ $product->name }} :)</h5>
                         <form action="{{ url('/add-review') }}" method="POST">
                             @csrf
                             <input type="hidden" name="product_id" value="{{ $product->id }}">
                             <textarea class="form-control" name="user_review" rows="5" placeholder="Write a review"></textarea>
-                            <button type="submit">Submit Review</button>
+                            <button class="btn btn-rounded submit_review_btn" type="submit">Submit Review</button>
                         </form>
                     @else
                     <div class="alert alert-danger">

@@ -1,4 +1,4 @@
-<div id="carousel-container" class="carousel slide" data-bs-ride="carousel" style="background-color: #030303;">
+<div id="carousel-container" class="carousel slide banner-carousel" data-bs-ride="carousel" style="background-color: #030303;">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carousel-container" data-bs-slide-to="0" aria-current="true" class="active"></button>
         <button type="button" data-bs-target="#carousel-container" data-bs-slide-to="1"></button>
@@ -6,15 +6,15 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active" style="position:relative ;">
-        <img src="{{ asset('assets/images/slider.png') }}" style="max-width: 500px"
+        <img src="{{ asset('assets/images/home_banner/banner_1.png') }}"
         class="d-block" style="width: 100%;"/>         
       </div>
       <div class="carousel-item">
-        <img src="{{ asset('assets/images/slider.png') }}"
+        <img src="{{ asset('assets/images/home_banner/banner_2.png') }}"
         class="d-block" style="width: 100%;">
       </div>
       <div class="carousel-item">
-        <img src="{{ asset('assets/images/slider.png') }}"
+        <img src="{{ asset('assets/images/home_banner/banner_3.png') }}"
         class="d-block" style="width: 100%;"/>
       </div>
       </div>

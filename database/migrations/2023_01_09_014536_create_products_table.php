@@ -23,7 +23,6 @@ return new class extends Migration
             $table->string('original_price');
             $table->string('selling_price');
             $table->string('image');
-            $table->string('qty');
             $table->string('tax');
             $table->tinyInteger('status');
             $table->tinyInteger('favorite');

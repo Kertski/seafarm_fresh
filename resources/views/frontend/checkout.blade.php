@@ -1,19 +1,21 @@
 @extends('layouts.front')
 
-@section('title')
+@section('title',)
     Checkout
 @endsection
 
 @section('content')
-    <div class="container mt-5">
-        <form action="{{ url('place-order') }}" method="POST">
+    <div class="container mt-5 checkout_container">
+        <form action="{{ url('/proceed-to-pay') }}" method="POST">
         {{ csrf_field() }}
         @method('POST')
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-7 checkout_container">
                 <div class="card">
                     <div class="card-body">
-                        <h6>Basic Details</h6>
+                        <div class="card-header checkout_card_title">
+                            <h6 class="checkout_title">Basic Details</h6>
+                        </div>
                         <hr>
                         <div class="row">
                             <div class="col-md-6">
@@ -62,32 +64,34 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 checkout_container">
                 <div class="card">
                     <div class="card-body">
-                        <h6>Order Details</h6>
+                        <div class="card-header checkout_card_title">
+                            <h6 class="checkout_title">Order Details</h6>
+                        </div>
                         <hr>
-                        <thead>
-                            <th>Name</th>
-                            <th>Qty</th>
-                            <th>Price</th>                        
-                        </thead>
                         <table class="table table-striped table-bordered">
+                            <thead>
+                                <th>Name</th>
+                                <th>Qty</th>
+                                <th>Price</th>                        
+                            </thead>
                             <tbody>
                                 @php $total = 0; @endphp
                                 @foreach ($cartitems as $item)
                                     <tr>
                                         <td>{{ $item->products->name }} </td> 
                                         <td>{{ $item->prod_qty }}</td>
-                                        <td>{{ $item->products->selling_price }}</td>                                       
+                                        <td>₱ {{ $item->products->selling_price* $item->prod_qty }}.00</td>                                       
                                     </tr>
                                 @php $total += $item->products->selling_price * $item->prod_qty ; @endphp                                 
                                 @endforeach
                             </tbody>
                         </table>
-                        <h6>{{ $total }}</h6>
+                        <h6>₱ {{ $total }}.00</h6>
                         <hr>
-                        <button class="btn btn-primary float-end paypal-button" type="submit" name="payment_mode" value="Cash on Delivery">Place Order (COD)</button>
+                        <button class="btn btn-primary pay_button" id="pay_button" type="submit" name="payment_mode" value="Cash on Delivery">Place Order (COD)</button>
                         <div id="paypal-button-container"></div>
                         
                     </div>
@@ -102,6 +106,7 @@
 @section('scripts')
 <script src="https://www.paypal.com/sdk/js?client-id=AQjtLoihkxmzC9bXrbmC8Z20VTFy7GKA_XC6TC8kqLcWT_-G4_VbVe7nvOwTeF04gf1n0Wi4FxY849lv&currency=PHP"></script>
 <script>
+    jQuery.noConflict()(function ($) {
     paypal.Buttons({
       // Sets up the transaction when a payment button is clicked
       createOrder: (data, actions) => {
@@ -135,7 +140,7 @@
           $.ajax({
 
             method: "POST",
-            url: "/place-order",
+            url: "/proceed-to-pay",
             data: {
                 'first_name':firstname,
                 'last_name':lastname,
@@ -160,6 +165,7 @@
         });
       }
     }).render('#paypal-button-container');
+});
   </script>
   
   

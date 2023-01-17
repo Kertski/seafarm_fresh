@@ -1,4 +1,4 @@
-$(document).ready(function () {
+jQuery.noConflict()(function ($) { $(document).ready(function () {
 
     loadcart();
 
@@ -112,6 +112,7 @@ $(document).ready(function () {
             }
         });
     });
+});
 
     
 });

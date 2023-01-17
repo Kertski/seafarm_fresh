@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('slug');
             $table->longText('description');
             $table->tinyInteger('status')->default('0');
-            $table->tinyInteger('favorites')->default('0');
             $table->string('image');
             $table->string('meta_title');
             $table->string('meta_descript');

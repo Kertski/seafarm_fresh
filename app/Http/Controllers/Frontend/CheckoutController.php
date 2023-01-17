@@ -76,8 +76,9 @@ class CheckoutController extends Controller
         if($request->input('payment_mode') == "Paid by Paypal")
         {
             return response()->json(['status' => "Order placed successfully"]);
+        }else
+        {
+        return redirect('/')->with('status', "Order placed successfully");
         }
-        
-        return redirect('/')->with('status', 'Order placed successfully');
     }
 }

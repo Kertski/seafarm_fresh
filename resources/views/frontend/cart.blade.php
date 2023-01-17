@@ -26,7 +26,8 @@
                         <h3>{{$item->products->name}}</h3>
                     </div>
                     <div class="col-md-3">
-                        <h3>Php {{$item->products->selling_price}}</h3>
+                        
+                        <h3>Php {{$item->products->selling_price * $item->prod_qty}}</h3>
                     </div>
                     <div class="col-md-3">
                         <input type="hidden" class="prod_id" value="{{ $item->prod_id }}">

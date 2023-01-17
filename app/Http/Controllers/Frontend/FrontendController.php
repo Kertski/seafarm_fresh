@@ -9,20 +9,27 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\Rating;
 use App\Models\Review;
+use App\Models\Blog;
 
 
 class FrontendController extends Controller
 {
     public function index()
     {
-        $featured_products = Product::where('favorite', '1')->take(2)->get();
-        $trending_category = Category::where('favorites', '1')->take(2)->get();
-        return view('frontend.index', compact('featured_products', 'trending_category'));
+        $favorite_seafood_meat = Product::where('cat_id', "1")->where('favorite', "1")->orwhere('cat_id', "2")->where('favorite', "1")->take(8)->get();
+        $favorite_vegetable_fruit = Product::where('cat_id', "3")->where('favorite', "1")->orwhere('cat_id', "4")->where('favorite', "1")->take(8)->get();
+        $seafood = Product::where('cat_id', "1")->where('favorite', "0")->get();
+        $meat = Product::where('cat_id', "2")->where('favorite', "0")->get();
+        $vegies = Product::where('cat_id', "3")->where('favorite', "0")->get();
+        $fruits = Product::where('cat_id', "4")->where('favorite', "0")->get();
+        $category = Category::where('status', "1")->get();
+        $blog = Blog::where('status', "1")->orderBy('created_at', 'DESC')->take(4)->get();
+        return view('frontend.index', compact('category', 'favorite_seafood_meat','favorite_vegetable_fruit', 'seafood', 'meat', 'vegies', 'fruits', 'blog'));
     }
 
     public function category()
     {
-        $category = Category::where('status','0')->get();
+        $category = Category::where('status','1')->get();
         return view ('frontend.category', compact('category'));
     }
 
@@ -31,7 +38,7 @@ class FrontendController extends Controller
         if(Category::where('slug', $slug)->exists())
         {
             $category = Category::where('slug', $slug)->first();
-            $products = Product::where('cat_id', $category->id)->where('status', '0')->get();
+            $products = Product::where('cat_id', $category->id)->where('status', '1')->get();
             return view('frontend.products.index', compact('category','products'));
         }else{
             return redirect('/')->with('status'."The Link is Broken");
@@ -73,7 +80,7 @@ class FrontendController extends Controller
 
     public function productListAjax()
     {
-        $products = Product::select('name')->where('status', '0')->get();
+        $products = Product::select('name')->where('status', '1')->get();
         $data = [];
 
         foreach ($products as $item) {
@@ -105,5 +112,33 @@ class FrontendController extends Controller
         {
             return redirect()->back();
         }
+    }
+
+    public function blogs()
+    {
+        $blog = Blog::where('status', '1')->get();
+        return view('frontend.blog', compact('blog'));
+    }
+
+    public function blogView($slug)
+    {
+        if(Blog::where('slug', $slug)->exists());
+        {
+            $blog = Blog::where('slug', $slug)->first();
+            return view('frontend.blogs.view', compact('blog'));
+        }
+        {
+            return redirect('/')->with('status', "No link was broken");
+        }
+    }
+
+    public function aboutView()
+    {
+        return view('frontend.aboutus');
+    }
+
+    public function contactView()
+    {
+        return view('frontend.contactus');
     }
 }

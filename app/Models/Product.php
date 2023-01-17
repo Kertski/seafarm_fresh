@@ -19,7 +19,6 @@ class Product extends Model
         'original_price',
         'selling_price',
         'image',
-        'qty',
         'tax',
         'status',
         'favorite',

@@ -11,6 +11,8 @@ use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Frontend\RatingController;
 use App\Http\Controllers\Frontend\ReviewController;
+use App\Http\Controllers\Admin\BlogController;
+
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -22,6 +24,10 @@ Route::get('view-category/{slug}', [FrontendController::class, 'viewcategory']);
 Route::get('category/{cat_slug}/{prod_slug}',[FrontendController::class, 'productview']);
 Route::get('product-list', [FrontendController::class, 'productListAjax']);
 Route::post('searchproduct', [FrontendController::class, 'searchProduct']);
+Route::get('blog', [FrontendController::class, 'blogs']);
+Route::get('blog/{slug}', [FrontendController::class, 'blogView']);
+Route::get('about-us', [FrontendController::class, 'aboutView']);
+Route::get('contact-us', [FrontendController::class, 'contactView']);
 
 Auth::routes();
 
@@ -77,4 +83,10 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
     Route::get('users', [DashboardController::class, 'users']);
     Route::get('view-user/{id}', [DashboardController::class, 'viewUser']);
+
+    Route::get('admin/blogs', [BlogController::class, 'index']);
+    Route::get('add-blog', [BlogController::class, 'add']);
+    Route::post('insert-blog', [BlogController::class, 'insert']);
+    Route::get('edit-blog/{id}', [BlogController::class, 'edit']);
+    Route::put('update-blog/{id}', [BlogController::class, 'update']);
 });

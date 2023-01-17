@@ -2,7 +2,7 @@
 
 @section('content')
     <div class='card'>
-        <div  class='card-header'>
+        <div  class='card-header add_category_header'>
             <h4>
                 Add Product
             </h4>
@@ -21,59 +21,55 @@
                         </select>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="">Name</label>
+                        <label for="">NAME</label>
                         <input type="text" class="form-control" name="name"/>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="">Slug</label>
+                        <label for="">SLUG</label>
                         <input type="text" class="form-control" name="slug"/>
                     </div>
                     <div class="col-md-12 mb-3">
-                        <label for="">Small Description</label>
+                        <label for="">SMALL DESCRIPTION</label>
                         <textarea name="small_description" row="3" class="form-control"></textarea>
                     </div>
                     <div class="col-md-12 mb-3">
-                        <label for="">Description</label>
+                        <label for="">DESCRIPTION</label>
                         <textarea name="description" row="3" class="form-control"></textarea>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="">Original Price</label>
+                        <label for="">ORIGINAL PRICE</label>
                         <input type= "number" class="form-control" name="original_price"/>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="">Selling Price</label>
+                        <label for="">SELLING PRICE</label>
                         <input type= "number" class="form-control" name="selling_price"/>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="">Tax</label>
+                        <label for="">TAX</label>
                         <input type= "number" class="form-control" name="tax"/>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="">Quantity</label>
-                        <input type= "number" class="form-control" name="qty"/>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="">Status</label>
+                        <label for="">STATUS</label>
                         <input type= "checkbox" name="status"/>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="">Favorite</label>
+                        <label for="">FAVORITE</label>
                         <input type="checkbox" name="favorite"/>
                     </div>
                     <div class="col-md-12 mb-3">
-                        <label for="">Meta Title</label>
+                        <label for="">META TITLE</label>
                         <input type="text" name="meta_title" class="form-control"/>
                     </div>
                     <div class="col-md-12 mb-3">
-                        <label for="">Meta Keywords</label>
+                        <label for="">META KEYWORDS</label>
                         <textarea name="meta_keywords" row="3" class="form-control"></textarea>
                     </div>
                     <div class="col-md-12">
-                        <label for="">Meta Description</label>
+                        <label for="">META DESCRIPTION</label>
                         <input type="text" name="meta_descript" class="form-control"/>
                     </div>
                     <div class="col-md-12">
-                        <input type="file" name="image" class="form-control"></input>
+                        <input type="file" name="image" class="form-control">
                     </div>
                     </div class="col-md-12">
                         <button type="submit" class="btn btn-primary">Submit</button>

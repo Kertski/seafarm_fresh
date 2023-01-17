@@ -68,7 +68,11 @@
                                     @method('PUT')
                                     <select class="form-select" name="order-status">
                                         <option {{ $orders->status == '0' ? 'selected': '' }} value="0">Pending</option>
-                                        <option {{ $orders->status == '1' ? 'selected': '' }} value="1">Completed</option>
+                                        <option {{ $orders->status == '1' ? 'selected': '' }} value="1">To Ship</option>
+                                        <option {{ $orders->status == '2' ? 'selected': '' }} value="2">On Delivery</option>
+                                        <option {{ $orders->status == '3' ? 'selected': '' }} value="3">Received</option>
+                                        <option {{ $orders->status == '4' ? 'selected': '' }} value="4">Completed</option>
+                                        <option {{ $orders->status == '5' ? 'selected': '' }} value="5">Cancelled</option>
                                     </select>
                                     <button type="submit" class="btn btn-primary">Update</button>
                                 </form>

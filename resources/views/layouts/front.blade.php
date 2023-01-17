@@ -40,10 +40,11 @@
     <div class="content">
         @yield('content')
     </div>
+    @include('layouts.inc.frontfooter')
 
     <div class="messenger">
         <a href="https://m.me/seafarmfresh" target="_blank">
-            <img src="{{ asset('assets/images/messenger.png') }}" alt="whatsapp-logo" height="80px" width="80px">
+            <img src="{{ asset('assets/images/messenger.png') }}" alt="messenger-logo" height="80px" width="80px">
         </a>
     </div>
 
@@ -71,6 +72,8 @@
 
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script>
+
+    jQuery.noConflict()(function ($) { 
        
           var availableTags = [];
 
@@ -82,6 +85,7 @@
                 startAutoComplete(response);
             }
          });
+    
             
           function startAutoComplete(availableTags)
           {
@@ -89,6 +93,7 @@
                 source: availableTags
             });
           }
+        });
 
     </script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

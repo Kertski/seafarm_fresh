@@ -34,7 +34,7 @@
                                                     <td>{{ date('d-m-y', strtotime($item->created_at)) }}</td>
                                                     <td>{{ $item->tracking_number}}</td>
                                                     <td>{{ $item->total_price }}</td>
-                                                    <td>{{ $item->status == '0' ? 'pending' : 'completed' }}</td>
+                                                    <td class="{{ $item->status == '4' ? 'text-success' : 'text-danger' }}">{{ $item->status == '4' ? 'Completed' : 'Cancelled' }}</td>
                                                     <td>
                                                         <a href="{{ url('admin/view-order/'.$item->id) }}" class="btn btn-primary">View</a>
                                                     </td>

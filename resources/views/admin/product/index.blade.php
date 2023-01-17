@@ -2,18 +2,19 @@
 
 @section('content')
     <div class='card'>
-        <div class="card-header">
-            <h4>Product Page</h4>
-            <hr>
+        <div class="card-header card_name_admin">
+            <h4>PRODUCT</h4>
         </div>
+        <br>
         <div  class='card-body'>
-            <table class="table table-bordered table-striped">
+            <table class="table table-striped">
                 <thead>
-                    <tr>
-                        <th>Id</th>
+                    <tr class="column_name_admin">
+                        <th>ID</th>
                         <th>Category</th>
                         <th>Name</th>
                         <th>Selling Price</th>
+                        <th>Status</th>
                         <th>Image</th>
                         <th>Action</th>
                     </tr>
@@ -21,10 +22,15 @@
                 <tbody>
                     @foreach($products as $item)
                     <tr>
-                        <td>{{ $item->id }}</td>
+                        <td class="id_text">{{ $item->id }}</td>
                         <td>{{ $item->category->name }}</td>
                         <td>{{ $item->name }}</td>
                         <td>{{ $item->selling_price }}</td>
+                        @if($item->status == '1')
+                            <td class="text-success">Active</td>  
+                        @elseif($item->status == '0')
+                            <td class="text-danger">Inactive</td>  
+                        @endif
                         <td>
                             <img src="{{ asset('assets/uploads/products/'.$item->image) }}" alt="Image Here" class="cate_image"> 
                             {{ $item->image }}

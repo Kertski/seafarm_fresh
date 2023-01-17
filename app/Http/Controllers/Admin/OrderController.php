@@ -10,7 +10,7 @@ class OrderController extends Controller
 {
     public function index()
     {
-        $orders = Order::where('status', '0')->get();
+        $orders = Order::where('status', '0')->orWhere('status', '1')->orWhere('status', '2')->orWhere('status', '3')->get();
         return view('admin.orders.index', compact('orders'));
     }
 
@@ -30,7 +30,7 @@ class OrderController extends Controller
 
     public function orderHistory()
     {
-        $orders = Order::where('status', '1')->get();
+        $orders = Order::where('status', '4')->orwhere('status', '5')->get();
         return view('admin.orders.history', compact('orders'));
     }
 }
