@@ -49,7 +49,7 @@
         </form>
       </div>
     </div>
-  </div>
+</div>
 
 <div class="py-3 mb-4 shadow-sm border-top product_container">
     <div>
@@ -68,10 +68,10 @@
                     <h2 class="ms-3">{{ $products->name }}</h2>
                     <div class="row">
                         <div class="col">
-                        <h6 class="ms-3 before_price text-danger">₱ {{ $products->selling_price}}.00</h6>
+                        <h6 class="ms-3 before_price text-danger">₱{{ $products->original_price}}.00</h6>
                         </div>
                         <div class="col">
-                        <h6 class="ms-3 orig_price font-weight-bolder">₱ {{ $products->original_price}}.00</h6>
+                        <h6 class="ms-3 orig_price font-weight-bolder">₱{{ $products->selling_price}}.00</h6>
                         </div>
                     </div>
                     @php $ratenum = number_format($rating_value) @endphp
@@ -139,3 +139,5 @@
         </div>
     </div>
 </div>
+
+@endsection

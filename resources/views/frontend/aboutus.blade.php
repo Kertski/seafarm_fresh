@@ -7,12 +7,13 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-        <div class="blog-image-col mb-3">
-            <img src="{{ asset('assets/images/about/aboutus.jpg') }}" alt="About Us Image" class="float-start me-4 mb-2" width="400px">
-        </div>
-        <div class="pb-2">
+
+        <div class="about-title pb-3">
             <h2 class="h1"> About Us </h2>
         </div>     
+        <div class="mb-3">
+            <img src="{{ asset('assets/images/about/aboutus.jpg') }}" alt="About Us Image" class="float-start me-4 mb-2 mt-2" width="400px">
+        </div>
         <div class="text-justify text-indent">
             <p class="content-text text-justify text-indent">We are online based market vendor! We have been providing fresh, locally-sourced produce 
                 and organic goods to our community for over 5 years. With our experience in developing growth methods, property agri-businesses, operational potency, 
@@ -28,12 +29,18 @@
                 Arcu cursus vitae congue mauris rhoncus aenean vel. Pulvinar sapien et ligula ullamcorper malesuada. Leo a diam sollicitudin tempor id eu nisl. Eget gravida cum sociis natoque. 
                 Senectus et netus et malesuada fames ac turpis.
             </p>
+
+            <div class="mb-3">
+                <img src="{{ asset('assets/images/about/farmer.jpeg') }}" alt="About Us Image" class="float-end ms-4 mb-2" width="400px">
+            </div>
+
             <p>
                 Ligula ullamcorper malesuada proin libero nunc consequat. Suspendisse potenti nullam ac tortor vitae purus faucibus. Consectetur lorem donec massa sapien faucibus et. 
                 Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Enim nec dui nunc mattis enim ut tellus elementum sagittis. 
                 Elementum tempus egestas sed sed risus pretium quam. Tincidunt lobortis feugiat vivamus at. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. 
                 Quam quisque id diam vel. Id aliquet lectus proin nibh nisl condimentum id venenatis.
             </p>
+
             <p>
                 Feugiat in ante metus dictum at tempor commodo ullamcorper a. Integer vitae justo eget magna fermentum. 
                 acilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat. Purus ut faucibus pulvinar elementum. Augue lacus viverra vitae congue eu consequat ac felis donec. 
@@ -43,32 +50,6 @@
                 Id venenatis a condimentum vitae sapien pellentesque.</p>        
             </p>
         </div>
-        <div class="float-start me-4 mb-4" >
-            <h2>Visit Our Store</h2>
-            <p>Located @ 123 Eskinita Street, Brgy. Subdivision, <br>
-                Navotas City, PH 1234</p>
-            <div >
-                <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=14.654766431863294~120.94993465350274&lvl=16.34683015669139&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
-                </iframe>
-            <div style="white-space: nowrap; text-align: center; width: 100px; padding: 6px 0;">
-               <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=14.654766431863294~120.94993465350274&amp;sty=r&amp;lvl=16.34683015669139&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
-               <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=14.654766431863294~120.94993465350274&amp;sty=r&amp;lvl=16.34683015669139&amp;rtp=~pos.14.654766431863294_120.94993465350274____&amp;FORM=MBEDLD">Get Directions</a>
-           </div>
-            </div>
-        </div>
-       <p class="text-indent text-justify">
-            Tellus mauris a diam maecenas sed enim ut. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Leo a diam sollicitudin tempor. 
-            Netus et malesuada fames ac turpis. Sit amet risus nullam eget felis eget nunc. Lacus vel facilisis volutpat est velit egestas dui. 
-            Sed viverra tellus in hac habitasse platea dictumst. Sit amet nisl suscipit adipiscing. Platea dictumst quisque sagittis purus sit amet volutpat consequat. 
-            Pellentesque pulvinar pellentesque habitant morbi tristique. Sit amet luctus venenatis lectus magna fringilla urna. Etiam non quam lacus suspendisse faucibus. 
-            In hac habitasse platea dictumst. Eget duis at tellus at urna condimentum. Pellentesque sit amet porttitor eget dolor morbi. Vestibulum lorem sed risus ultricies 
-            tristique nulla aliquet enim tortor. Euismod in pellentesque massa placerat duis ultricies. Mollis aliquam ut porttitor leo.
-       </p>
-       <p class="text-indent text-justify">
-            Nibh tellus molestie nunc non blandit. Imperdiet massa tincidunt nunc pulvinar sapien et ligula. Tempus imperdiet nulla malesuada pellentesque elit eget. 
-            Mauris nunc congue nisi vitae suscipit tellus mauris a. Dapibus ultrices in iaculis nunc sed augue lacus viverra. Nibh praesent tristique magna sit amet purus gravida. 
-            Id interdum velit laoreet id donec ultrices tincidunt arcu non. Nam libero justo laoreet sit. Tempor commodo ullamcorper a lacus vestibulum sed arcu non. 
-            Ultrices sagittis orci a scelerisque purus. In metus vulputate eu scelerisque felis imperdiet proin.
        </p>
 
        <p>  "Tellus mauris a diam maecenas sed enim ut. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Leo a diam sollicitudin tempor."
@@ -77,6 +58,20 @@
        <p class="float-end">
         - Anonymous
        </p>
+       <div class="me-4 mb-4" >
+        <h2>Visit Our Store</h2>
+        <p>Located @ 123 Eskinita Street, Brgy. Subdivision, <br>
+            Navotas City, PH 1234</p>
+            <div >
+                <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=14.654766431863294~120.94993465350274&lvl=16.34683015669139&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+                </iframe>
+            <div style="white-space: nowrap; text-align: center; width: 00px; padding: 6px 0;">
+                <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=14.654766431863294~120.94993465350274&amp;sty=r&amp;lvl=16.34683015669139&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+                <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=14.654766431863294~120.94993465350274&amp;sty=r&amp;lvl=16.34683015669139&amp;rtp=~pos.14.654766431863294_120.94993465350274____&amp;FORM=MBEDLD">Get Directions</a>
+            </div>
+        </div>
+        </div>
+
 
         </div>
     </div>

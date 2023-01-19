@@ -18,45 +18,45 @@
                         </div>
                         <hr>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-3">
                                 <label for="">First Name</label>
                                 <input type="text" class="form-control first_name" value="{{ Auth::user()->first_name }}" name="first_name" placeholder="Enter First Name">
                                 <span id="firstname_error" class="text-danger"></span>
                             </div>
-                            <div class="col-md-6 mt-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">Last Name</label>
                                 <input type="text" class="form-control last_name" value="{{ Auth::user()->last_name }}" name="last_name" placeholder="Enter Last Name">
                                 <span id="lastname_error" class="text-danger"></span>
                             </div>
-                            <div class="col-md-6 mt-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">Email</label>
                                 <input type="email" class="form-control email" value="{{ Auth::user()->email }}" name="email" placeholder="Enter Email">
                                 <span id="email_error" class="text-danger"></span>
                             </div>
-                            <div class="col-md-6 mt-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">Contact Number</label>
                                 <input type="text" class="form-control phone" value="{{ Auth::user()->phone }}" name="phone" placeholder="Enter Contact Number">
                                 <span id="phone_error" class="text-danger"></span>
                             </div>
-                            <div class="col-md-6 mt-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">Address 1</label>
                                 <input type="text" class="form-control address_1" value="{{ Auth::user()->address_1 }}" name="address_1" placeholder="Enter Address 1">
                                 <span id="address_1_error" class="text-danger"></span>
                             </div>
-                            <div class="col-md-6 mt-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">Address 2</label>
                                 <input type="text" class="form-control address_2" value="{{ Auth::user()->address_2 }}" name="address_2" placeholder="Enter Address 2">
                             </div>
-                            <div class="col-md-6 mt-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">City</label>
                                 <input type="text" class="form-control city" value="{{ Auth::user()->city }}" name="city" placeholder="Enter City">
                                 <span id="city_error" class="text-danger"></span>
                             </div>
-                            <div class="col-md-6 mt-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">Province</label>
                                 <input type="text" class="form-control province" value="{{ Auth::user()->province }}" name="province" placeholder="Enter Provice">
                             </div>
-                            <div class="col-md-6 mt-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="">Zip Code</label>
                                 <input type="number" class="form-control zip_code" value="{{ Auth::user()->zip_code }}" name="zip_code" placeholder="Enter Provice">
                             </div>

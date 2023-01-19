@@ -23,8 +23,8 @@
                                 <img src="{{ asset('assets/uploads/products/'.$prod->image) }}" alt="Product Image" width="100%">
                                 <div class="card-body product_name pb-5">
                                     <h5 class="product_name">{{ $prod->name }}</h5>
-                                    <span class="float-start before_price product_price">₱ {{ $prod->selling_price }}.00</span>
-                                    <span class="float-end product_price orig_price">₱ {{ $prod->original_price }}.00</span>
+                                    <span class="float-start before_price product_price">₱{{ $prod->original_price }}.00</span>
+                                    <span class="float-end product_price orig_price">₱{{ $prod->selling_price }} .00</span>
                                 </div>
                             </a>
                         </div>

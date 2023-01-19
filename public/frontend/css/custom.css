@@ -182,6 +182,14 @@ footer {
 font-size: larger;
 }
 
+.owl-nav button.owl-next {
+  font-size: 30px !important;
+}
+
+.owl-nav button.owl-prev {
+  font-size: 30px !important;
+}
+
 /* CATEGORY */
 
 .carousel_category_indicator {
@@ -413,6 +421,12 @@ font-size: larger;
 
 .text-indent {
     text-indent: 5%;
+}
+
+/* ABOUT US PAGE */
+
+.about-title {
+  margin-top: 100px !important;
 }
 
 /* CONTACT US */

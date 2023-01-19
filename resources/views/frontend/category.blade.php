@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('title')
-    Welcome to Seafarm Fresh
+    Products
 @endsection
 
 @section('content')

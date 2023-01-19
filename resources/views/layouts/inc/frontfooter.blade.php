@@ -49,7 +49,7 @@
         <div class="container">
             <div class="row">
               <div class="" style="text-align: center;">
-                <p class="copyright-text">Copyright © 2022 All Rights Reserved by 
+                <p class="copyright-text">Copyright © 2023 All Rights Reserved by 
              <a href="#">Seafarm Fresh</a>.
                 </p>
               </div>
